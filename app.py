@@ -14,10 +14,7 @@ helpful = st.number_input("Enter Helpful Votes", min_value=0)
 if st.button("Predict"):
     
     if (rating<=2):
-        if (helpful==0):
-            st.success("✅ Product is Recommended")
-        else:
-            st.error("❌ Product is Not Recommended")
+        st.error("❌ Product is Not Recommended")
 
     else:
         input_df = pd.DataFrame([[rating, helpful]], 
